@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Pankaj Agarwal",
+        "office" : "Magnet Brains Software Technology Pvt. Ltd",
+        "project" : "pabbly.com"
+    },
+    {
+        "name": "Ramesh Chandra",
+        "office" : "Magnet Brains",
+        "project" : "woofresh.com" 
+    },
+    {
+        "name": "Suk Sagar",
+        "office" : "Magnet",
+        "project" : "formget.com"
+    },
+    {
+        "name": "Rakesh Roy",
+        "office" : "Magnet Brains Software Technology Pvt. Ltd",
+        "project" : "pabbly.com"
+    }
+]
