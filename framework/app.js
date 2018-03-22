@@ -3,10 +3,10 @@ var app = express();
 app.get('/', function(req, res){
     res.send('<h1>First Express program </h1>');
 });
-
-var Server = app.listen(8080, function(){
-    console.log('listen to port 8080');
-});
+app.listen(8080);
+// var Server = app.listen(8080, function(){
+//     console.log('listen to port 8080');
+// });
 
 
 
