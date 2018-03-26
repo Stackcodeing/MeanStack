@@ -13,13 +13,24 @@
       <div class="row">
         <div class="col-sm-8">
           <div class="maincontent">
-            <h1>Friends List</h1>
-            <% fLdata.forEach(function(item){ %>
-                <h2 class="fname"><%= item.name %></h2>
-                <img class="fimg" src="/images/friend/<%= item.shortname %>.jpg" alt="Photo of <%= item.name %>" />
-                <h3><%= item.office %></h3>
-                <p><%= item.project %></p>
-            <% }) %>
+            <% if(pageID == 'friends') { %>
+              <h1>Friends List</h1>
+              <% fLdata.forEach(function(item){ %>
+                  <h2 class="fname"><%= item.name %></h2>
+                  <img class="fimg" src="/images/friend/<%= item.shortname %>.jpg" alt="Photo of <%= item.name %>" />
+                  <h3><%= item.office %></h3>
+                  <p><%= item.project %></p>
+              <% }) %>
+            <% } %>  
+            <% if(pageID == 'frienddetails') { %>
+              <h1>Friend Details</h1>
+              <% singlefri.forEach(function(item) { %>
+                  <h2 class="fname"><%= item.name %></h2>
+                  <img class="fimg" src="/images/friend/<%= item.shortname %>.jpg" alt="Photo of <%= item.name %>" />
+                  <h3><%= item.office %></h3>
+                  <p><%= item.project %></p>
+              <% }) %>
+            <% } %>  
           </div>
         </div><!-- primary -->
       </div>

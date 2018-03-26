@@ -13,16 +13,22 @@ router.get('/friends-list', function(req, res){
 
 });
 
-router.get('/friends/:friendid', function(req, res){
-   var friend = jfile.friends[req.params.friendid];
-    res.send(`
-        <link rel="stylesheet" type="text/css" href="/css/style.css">
-        <h2>${friend.name}</h2>
-        <img class="fimg" src="/images/friend/${friend.shortname}.jpg" alt="banner" />
-        <h3>${friend.office}</h3>
-        <p>${friend.project}</p>
-        <script src="/reload/reload.js"></script>
-    `);
+router.get('/friends-list/:friendid', function(req, res){
+    var data = req.app.get('jdata');
+    var detFriends = [];
+    data.friends.forEach(function(item){
+        if(item.shortname == req.params.friendid)
+        {
+            detFriends.push(item);
+        }
+    });
+
+    res.render('friends',{
+        pageTitle: 'Friends Info',
+        singlefri: detFriends,
+        pageID: 'frienddetails'
+    });
+    
 });
 
 module.exports = router;

@@ -8,7 +8,7 @@ app.set('jdata',jfile);
 app.set('view engine', 'ejs');
 app.set('views', 'view');
 app.locals.siteTitle = 'CSgeeks';
-
+app.locals.allfriend = jfile.friends;
 // create middleware to access public folder (css, image, js etc...)
 app.use(express.static('public'));
 
