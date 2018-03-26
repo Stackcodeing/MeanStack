@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include template/head.ejs %>
+  </head>
+  <body >
+
+    <header>
+      <% include template/header.ejs %>
+    </header>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="maincontent">
+            <h1>Friends List</h1>
+            <% fLdata.forEach(function(item){ %>
+                <h2 class="fname"><%= item.name %></h2>
+                <img class="fimg" src="/images/friend/<%= item.shortname %>.jpg" alt="Photo of <%= item.name %>" />
+                <h3><%= item.office %></h3>
+                <p><%= item.project %></p>
+            <% }) %>
+          </div>
+        </div><!-- primary -->
+      </div>
+    </div><!-- container -->
+    <% include template/footer.ejs %>
+</body>
+</html>

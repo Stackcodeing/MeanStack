@@ -1,21 +1,25 @@
 {
     "friends": [{
         "name": "Pankaj Agarwal",
+        "shortname" : "pankaj",
         "office" : "Magnet Brains Software Technology Pvt. Ltd",
         "project" : "pabbly.com"
     },
     {
         "name": "Ramesh Chandra",
+        "shortname" : "ramesh",
         "office" : "Magnet Brains",
         "project" : "woofresh.com" 
     },
     {
         "name": "Suk Sagar",
+        "shortname" : "suk",
         "office" : "Magnet",
         "project" : "formget.com"
     },
     {
         "name": "Rakesh Roy",
+        "shortname" : "rakesh",
         "office" : "Magnet Brains Software Technology Pvt. Ltd",
         "project" : "pabbly.com"
     }]
