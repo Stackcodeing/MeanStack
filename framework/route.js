@@ -16,6 +16,8 @@ app.use(express.static('public'));
 app.use(require('./route/index'));
 app.use(require('./route/friend'));
 app.use(require('./route/view-friend'));
+app.use(require('./route/feedback'));
+app.use(require('./route/api'));
 
 // Routing in single file
 
