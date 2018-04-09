@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include template/head.ejs %>
+  </head>
+  <body >
+
+    <header>
+      <% include template/header.ejs %>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+            <h1 class="feedback-form-title">Add New Quote</h1>
+            <form action="/save-quote" method="POST">
+                <input type="text" placeholder="name" name="name">
+                <input type="text" placeholder="quote" name="quote">
+                <button type="submit">Submit</button>
+            </form>
+            </div><!-- primary -->
+</div>
+    </div><!-- container -->
+    <% include template/footer.ejs %>
+</body>
+</html>

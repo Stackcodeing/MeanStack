@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include template/head.ejs %>
+  </head>
+  <body >
+
+    <header>
+      <% include template/header.ejs %>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+            <h1 class="feedback-form-title">Recent User</h1>
+             <table class="userlist">
+               <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Quote</th>
+                    <th>Action</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <% lquote.forEach(function(item){ %>
+                    <tr>
+                      <td class="name"><%= item.name %></td>
+                      <td class="quote"><%= item.quote %></td>
+                      <td class="edit">
+                        <a href='/edit/<%= item._id %>'>Edit</a>
+                        <span>|</span>
+                        <a href='/delete/<%= item._id %>'>Delete</a>
+                      </td>
+                    </tr>
+                  <% }) %>
+                </tbody>  
+             </table>
+             <a href="/add-quote">Add New Quote</a>
+            </div><!-- primary -->
+</div>
+    </div><!-- container -->
+    <% include template/footer.ejs %>
+</body>
+</html>
